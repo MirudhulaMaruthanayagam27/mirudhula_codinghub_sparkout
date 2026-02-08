@@ -1,0 +1,33 @@
+<!--Create a text box. When user types something, 
+show the length of the text below using JavaScript..-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student List</title>
+    
+    <style>
+    </style>
+</head>
+
+<body>
+  
+  <input type="text" id="len" placeholder="enter text">
+  <p id="display">len:0</p>
+  
+  <script>
+    
+    let val=document.getElementById("len");
+    
+    let show=document.getElementById("display");
+    
+    val.oninput = function() {
+            let textLength = val.value.length; 
+            show.innerHTML = "Length: " + textLength;
+        };
+    
+  </script>
+</body>
+</html>

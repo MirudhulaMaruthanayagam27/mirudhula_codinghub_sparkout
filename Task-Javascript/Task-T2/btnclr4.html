@@ -1,0 +1,55 @@
+<!--Create three buttons (Red, Green, Blue). 
+When clicking each button, 
+change the background color of a div using DOM.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Background Color</title>
+    <style>
+        #Box {
+            width: 500px;
+            height: 600px;
+            background-color: lightgray;
+        }
+
+        button {
+            padding:20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Change Background Color</h2>
+    
+    <div id="Box">Color Box</div>
+    
+    <button id="red1">Red</button>
+    <button id="green1">Green</button>
+    <button id="blue1">Blue</button>
+
+    <script>
+      
+        let box = document.getElementById("Box");
+
+        let red = document.getElementById("red1");
+        let green = document.getElementById("green1");
+        let blue = document.getElementById("blue1");
+
+        // Add click events
+        red.onclick = function() {
+            box.style.backgroundColor = "red";
+        }
+
+        green.onclick = function() {
+            box.style.backgroundColor = "green";
+        }
+
+        blue.onclick = function() {
+            box.style.backgroundColor = "blue";
+        }
+    </script>
+</body>
+</html>
+

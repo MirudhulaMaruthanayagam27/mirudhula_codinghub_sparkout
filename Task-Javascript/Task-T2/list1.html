@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student List</title>
+</head>
+<body>
+
+    <h2>Student Names</h2>
+    <!--list will appear -->
+    <ul id="studentList"></ul>
+  
+    <script>
+    
+    let students=["hi","hello","miru"];
+    let ul=document.getElementById("studentList");
+    for(let i=0;i<students.length;i++){
+      let li = document.createElement("li");
+      li.textContent=students[i];
+      ul.appendChild(li);
+  
+}
+    </script>
+</body>
+</html>

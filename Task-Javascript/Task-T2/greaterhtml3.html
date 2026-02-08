@@ -1,0 +1,36 @@
+<!--Create an array of numbers. 
+Use a loop to find numbers greater than 10 and 
+display them inside a div.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student List</title>
+    
+    <style>
+      #show{
+        width:200px;
+        height: 100px;
+        background-color: blue;
+      }
+    </style>
+</head>
+<body>
+  <div id="show"></div>
+  <script>
+    
+    let arr=[1,2,3,20,4,50];
+    let res=[];
+    
+    for(let i=0;i<arr.length;i++){
+      
+      if(arr[i]>10){
+        res.push(arr[i]);
+      }
+    document.getElementById("show").innerHTML=res.join("<br><br>");
+      
+    }
+  </script>
+</body>
+</html>
