@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Menu</title>
+    <style>
+            body {
+            font-family: Georgia, Times, serif;
+            background-color: #f5f5f5;
+            margin: 50px 0; /* top and bottom margin */
+            text-align: center; /* center inline-block menu */
+        }
+        .menu {
+            background-color: #ffffff;
+            width: 300px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            overflow: hidden;
+            display: inline-block; /* center using text-align on body */
+        }
+        
+        .menu-header{
+          padding-top:10px;
+          font-size:35px;
+          font-weight: bold;
+          background-color: yellow;
+          display: block;
+        }
+        .menu a{
+          display: block;
+          text-decoration: none;
+          padding:15px;
+        }
+        .menu a:hover{
+          background-color: black;
+          transition: 0.5sec;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-header">CSS Menu</div>
+        <a href="#">Appetizers</a>
+        <a href="#">Entrees</a>
+        <a href="#">Desserts</a>
+        <a href="#">Beverages</a>
+        <a href="#">About</a>
+    </div>
+</body>
+</html>

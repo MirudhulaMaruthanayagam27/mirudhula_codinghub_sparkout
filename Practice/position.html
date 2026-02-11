@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing:border-box;
+    }
+    body{
+      font-size: 1.5rem;
+      min-height:200vw;
+    }
+    .outer{
+      border: 3px dashed black;
+      width:75vw;
+      height:85vw;
+      margin:40px auto;
+      position: relative;
+    }
+    .inner{
+      border:2px solid blue;
+      width: 40vw;
+      height:50vw;
+      margin:150px auto;
+     
+    }
+    .box{
+      width:150px;
+      height:150px;
+      /*border:2px solid red;*/
+      color:white;
+    }
+    .abs{
+      background-color: blue;
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      /*z-index:1;*/
+    }
+    .relative{
+      background-color: red;
+      top:100px;
+      left: 100px;
+      position: relative;
+    }
+    .fixed{
+      background-color: green;
+      position: fixed;
+      top:0;
+    }
+    .sticky{
+      background-color: black;
+      position:sticky;
+      top:100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="inner">
+      <div class="box abs">
+        <p>absolute</p>
+      </div>
+      <div class="box relative">
+        <p>relative</p>
+      </div>
+      <div class="box fixed">
+        <p>Fixed</p>
+      </div>
+      <div class="box sticky">
+        <p>sticky</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
