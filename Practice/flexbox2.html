@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+*{
+  margin:0;
+  box-sizing:border-box;
+}
+
+body{
+  padding:20px;
+}
+
+.container{
+  border:7px solid pink;
+  max-width:800px;
+  margin:auto;
+
+  display:flex;
+  flex-wrap:wrap;     /* ✅ wrap enabled */
+  gap:1rem;
+}
+
+.box{
+  background:black;
+  color:white;
+  padding:1rem;
+  height:100px;
+  font-size:2rem;
+
+  flex:1 1 250px;     /* ✅ magic line */
+}
+
+</style>
+</head>
+
+<body>
+<main class="container">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+  <div class="box">6</div>
+</main>
+</body>
+</html>
