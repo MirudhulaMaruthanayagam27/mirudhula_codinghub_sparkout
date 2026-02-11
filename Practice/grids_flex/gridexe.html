@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .layout{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "h h h"
+        "sb1 m sb2"
+        "f f f"
+        ;
+        grid-template-rows: 100px 400px 100px;
+
+        /*instead use this both:
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: 110vh 80pvh 10vh;
+        */
+      }
+      .header{
+        grid-area:h;
+      }
+      .sidebar1{
+        grid-area: sb1;
+      }
+      .sidebar2{
+        grid-area: sb2;
+      }
+      .footer{
+        grid-area:f;
+      }
+      .layout div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid black;
+        background-color: aqua;
+        font-size: 3rem;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      .header{
+
+      }
+    </style>
+  </head>
+<body>
+
+  <div class="layout">
+    <div class="header">Headrer</div>
+    <div class="sidebar1">Sb1</div>
+    <div class="main">main</div>
+    <div class="sidebar2">Sb2</div>
+    <div class="footer">footer</div>
+  </div>
+</body>
+</html>

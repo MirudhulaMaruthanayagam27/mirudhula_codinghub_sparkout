@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        background-color: rgb(159, 159, 7);
+      }
+      .cont{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        /*
+        1--grid-template-columns: 200px 300px auto;
+        2--grid-template-columns: minmax(200px,1fr) minmax(200px,1fr) minmax(200px,1fr);
+        3--column-gap: 20px;
+        4--row-gap: 20px;
+         or gap:20px-both row col
+         grid-template-columns: repeat(3,1fr);instead use below:
+        5--grid-template-columns: repeat(3,minmax(200px,1fr));
+        6--autofit
+        7--grid-template-column:1fr 2fr 1fr
+        8--grid-template-rows:1fr 2fr 1fr;
+         */
+         gap:20px;
+         grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+
+         
+      }
+      .para{
+        background-color: blue;
+        color: white;
+        padding:1rem;
+      }
+      .outer{
+        display: grid;
+        grid-template-columns: repeat(3,200px);
+        grid-template-rows: 100px 200px;
+        grid-auto-rows: 200px;
+        /*
+        grid-auto-flow:column;
+        and
+        grid-auto-flow:column;
+        grid-template-rows: 100px 200px 300px;
+        grid-auto-rows: 200px;
+        */
+        gap:20px;
+        align-items:center;/*
+        --already stretch ,other is end
+        --grid-template-columns: repeat(3,200px); 
+           with--justify-content: end;/start default:stretch;
+        ---justify-items:center;
+             moves particular value the num inside box
+        */
+        justify-content: end;
+      }
+      .box{
+        background-color: greenyellow;
+        color: white;
+        font-size: 4rem;
+        display: grid;
+        justify-content: center;
+        grid-auto-flow: column;
+        align-items: center;
+      }
+
+      /*span-->
+      .b1{
+        /*grid-column-start: 1;
+        grid-column-end: 3;
+        combine both:grid-column:1/4 or 1/-1
+        
+        grid-row:span 2;
+      }
+      .b5{
+        grid-row:span 2;
+      }
+      */
+
+    </style>
+  </head>
+
+<body>
+  <div class="outer">
+    <div class="box b1">1
+    </div>
+    <div class="box b2">2</div>
+    <div class="box b3">3</div>
+    <div class="box b4">4</div>
+    <div class="box b5">5</div>
+    <div class="box b6">6</div>
+    <div class="box b7">7</div>
+    <div class="box b8">8</div>
+    <div class="box b9">9</div>
+    <div class="box b10">10</div>
+    <div class="box b11">11</div>
+  </div>
+  <div class="cont">
+    <div class="para">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut pariatur impedit quo voluptatibus illo in a ex expedita. Nobis, esse eum fugit corporis architecto earum corrupti animi expedita rem aliquid consequun</p>
+    </div>
+
+    <div class="para">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut pariatur impedit quo voluptatibus illo in a ex expedita. Nobis, esse eum fugit corporis architecto earum corrupti animi expedita rem aliquid consequun</p>
+    </div>
+
+    <div class="para">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut pariatur impedit quo voluptatibus illo in a ex expedita. Nobis, esse eum fugit corporis architecto earum corrupti animi expedita rem aliquid consequun</p>
+    </div>
+
+    <div class="para">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut pariatur impedit quo voluptatibus illo in a ex expedita. Nobis, esse eum fugit corporis architecto earum corrupti animi expedita rem aliquid consequun</p>
+    </div>
+
+    <div class="para">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut pariatur impedit quo voluptatibus illo in a ex expedita. Nobis, esse eum fugit corporis architecto earum corrupti animi expedita rem aliquid consequun</p>
+    </div>
+
+    <div class="para">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut pariatur impedit quo voluptatibus illo in a ex expedita. Nobis, esse eum fugit corporis architecto earum corrupti animi expedita rem aliquid consequun</p>
+    </div>
+
+    <div class="para">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut pariatur impedit quo voluptatibus illo in a ex expedita. Nobis, esse eum fugit corporis architecto earum corrupti animi expedita rem aliquid consequun</p>
+    </div>
+
+    <div class="para">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut pariatur impedit quo voluptatibus illo in a ex expedita. Nobis, esse eum fugit corporis architecto earum corrupti animi expedita rem aliquid consequun</p>
+    </div>
+
+    <div class="para">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut pariatur impedit quo voluptatibus illo in a ex expedita. Nobis, esse eum fugit corporis architecto earum corrupti animi expedita rem aliquid consequun</p>
+    </div>
+    <div class="para">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut pariatur impedit quo voluptatibus illo in a ex expedita. Nobis, esse eum fugit corporis architecto earum corrupti animi expedita rem aliquid consequun</p>
+    </div>
+  </div>
+</body>
+</html>
