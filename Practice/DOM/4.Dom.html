@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dom function</title>
+  </head>
+<body>
+  <button onclick="subscribe();" class="jsbtn">Subscribe</button>
+
+<script>
+
+  function subscribe(){
+    const btn=document.querySelector('jsbtn');
+    if(btn.innerText==='Subscribe'){
+      btn.innerHTML='Subscribed';
+    }
+    else{
+      btn.innerHTML='Subscribe';
+    }
+  }
+</script>
+</body>
+</html>
