@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Slideshow Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #slide {
+            font-size: 2rem;
+            padding: 50px;
+            border: 2px solid #333;
+            margin-bottom: 20px;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #f0f0f0;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="slide">Slide1</div>
+    <button id="nextBtn">Next Slide</button>
+
+    <script>
+        // 1️⃣ Generator function
+        function* slideShow(slides) {
+            for (let slide of slides) {
+                yield slide; // pause here until next()
+            }
+        }
+
+        // 2️⃣ Slide data
+        const slides = ["Slide1", "Slide2", "Slide3", "Slide4"];
+
+        // 3️⃣ Create generator iterator
+        const show = slideShow(slides);
+
+        // 4️⃣ DOM elements
+        const slideDiv = document.getElementById("slide");
+        const nextBtn = document.getElementById("nextBtn");
+
+        // 5️⃣ Button click handler
+        nextBtn.addEventListener("click", () => {
+            const nextSlide = show.next();
+            if (!nextSlide.done) {
+                slideDiv.textContent = nextSlide.value;
+            } else {
+                slideDiv.textContent = "End of Slides!";
+                nextBtn.disabled = true; // disable button at end
+            }
+        });
+
+        // 6️⃣ Initialize first slide
+        slideDiv.textContent = show.next().value;
+    </script>
+
+</body>
+
+</html>
