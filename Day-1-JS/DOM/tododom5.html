@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style></style>
+  </head>
+
+<body>
+
+  <input type="text"  class="val" placeholder="Enter task">
+  <button type="submit" id="add">Add Task</button>
+  <ul class="ull"></ul>
+</body>
+
+<script>
+
+  let input=document.getElementsByClassName("val")[0];
+  let addbtn=document.getElementById("add");
+  let listval=document.getElementsByClassName("ull")[0];
+
+  addbtn.addEventListener("click",function(){
+    const getval=input.value;
+    if(getval=="") return
+    const li=document.createElement("li");
+    li.textContent="hi";
+    li.addEventListener("click",function(){
+      li.remove();
+    })
+    listval.appendChild(li);
+    input.value="";
+  })
+
+</script>
+</html>
