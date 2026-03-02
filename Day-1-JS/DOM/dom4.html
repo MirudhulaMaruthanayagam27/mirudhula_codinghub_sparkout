@@ -1,0 +1,22 @@
+
+<input id="search">
+
+<div class="item">Apple</div>
+<div class="item">Banana</div>
+<div class="item">Mango</div>
+<div class="item">Maaan</div>
+<script>
+let search = document.getElementById("search")
+let items = document.querySelectorAll(".item")
+
+search.addEventListener("input", function() {
+  for(let i = 0; i < items.length; i++) {
+    if(items[i].textContent.toLowerCase().includes(search.value.toLowerCase())) {
+      items[i].style.display = "block"
+    }
+    else{
+      items[i].style.display = "none"
+    }
+  }
+})
+</script>
