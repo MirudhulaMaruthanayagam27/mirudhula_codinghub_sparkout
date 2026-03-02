@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: aqua;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin:0;
+        height: 100vh;
+      }
+      .container{
+        background-color: brown;
+        padding: 40px;
+        width:360px;
+        max-width: 86%;
+      }
+      button{
+        cursor: pointer;
+        background: transparent;
+        margin-left: 10px;
+        font-size: 18px;
+        padding: 5px;
+      }
+      #addbtn { 
+        background: #0f0;
+       }
+       input[type="text"],li input.edit{
+        flex:1 1 auto;
+        padding: 5px;
+        border-radius: 4px;
+        border:2px solid black;
+        box-sizing: border-box;
+       }
+       ul{
+        list-style: none;
+        padding: 0;
+        margin-top: 10px;
+       }
+       li{
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        border-radius:4px;
+        border: 2px solid black;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        padding: 8px;
+        background-color: rgb(203, 203, 199);
+       }
+       li span { 
+        flex:1 1 auto; 
+        margin-right:8px; 
+        min-width:0; 
+      }
+      .done{
+
+        text-decoration: line-through;
+        color: grey;
+      }
+    </style>
+  </head>
+<body>
+  <div class="container">
+    <h1>Todo List</h1>
+    <div style="display: flex;">
+      <input type="text" id="input" placeholder="Enter task">
+      <button id="addbtn">+</button>
+    </div>
+    <ul id="tasklist">
+    <li>
+    <span>Buy milk</span>
+    <button>✅</button>
+    <button>✏️</button>
+    <button>🗑</button>
+    </li>
+    </ul>
+  </div>
+<script>
+function createlist(text){
+  const li=document.createElement("li");
+  const span=document.createElement("span");
+  span.textContent=text;
+  li.append(span);
+
+  const donebtn=document.createElement("button");
+  donebtn.textContent="✅";
+  donebtn.addEventListener("click",()=>span.classList.toggle("done"));
+  li.appendChild(donebtn);
+
+
+  const editbtn=document.createElement("button");
+  editbtn.textContent="✏️";
+  editbtn.addEventListener("click",()=>{
+    if(li.querySelector("input.edit")) return; 
+    span.classList.remove("done");
+  
+  const input=document.createElement("button");
+  input.type="text";
+  input.className="edit";
+  input.value=span.textContent;
+  li.replaceChild(input,span);
+  input.focus;
+  
+  const save=() =>{
+    if(input.value.trim()){
+      span.textContent=input.valuetrim();
+      li.replaceChild(span,input);
+    }
+    input.addEventListener("keypress",e=>e.key=="Enter" && save());
+    input.addEventListener("blur",save);
+  };
+  li.append(editbtn);
+  document.querySelector("#addbtn").addEventListener("click",()=>{
+    const text=input.value.trim();
+    if(text){
+      tasklist.appendChild(createlist(text));
+      input.value="";
+    }
+  });
+  const delbtn = document.createElement("button");
+    delbtn.textContent = "🗑";
+    delbtn.addEventListener("click", ()=>li.remove());
+    li.append(delbtn);
+    document.getElementById("tasklist").append(li);
+}
+
+</script>
+</body>
+</html>
