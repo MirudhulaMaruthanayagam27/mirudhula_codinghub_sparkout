@@ -1,0 +1,12 @@
+<h1 class="count">0</h1>
+<button class="btn">click</button>
+<script>
+
+  let cnt=document.getElementsByClassName("count");
+  let btn1=document.getElementsByClassName("btn");
+  let countt=0;
+  btn1.addEventListener("click",function() {
+    countt++;
+    cnt.innerText=countt;
+  });
+</script>
