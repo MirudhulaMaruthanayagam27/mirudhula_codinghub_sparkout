@@ -31,3 +31,14 @@ const value3={
 const {name3:n , age3:aa, address3:{streetno:sn, ad3 :add}} =value3;
 console.log(n,aa,sn,add);
 
+//Destructuring -in function
+const users={
+  name:"ww",
+  age:29
+};
+const des=({name,age})=>{
+  console.log(`${name} ,${age}`);
+}
+
+des(users);
+
