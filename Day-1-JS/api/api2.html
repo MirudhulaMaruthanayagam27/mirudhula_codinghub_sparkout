@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>API Data</head>
+
+<body>
+  <h1>Api Fetch user result</h1>
+  <ul id="htmlul"></ul>
+
+  <script>
+    async function fetchdata(){
+      try{
+      const htmllst=document.getElementById("htmlul");
+
+      //const api_url=await fetch("https://fakestoreapi.com/products");
+      const api_url=await fetch("https://jsonplaceholder.typicode.com/users");
+
+      const products=await api_url.json();
+
+      products.forEach(product => {
+        const list=document.createElement("li");
+        const ullist=document.createElement("ul");
+
+        Object.entries(product).forEach(([key,value])=> {
+          const inlist=document.createElement("li");
+          inlist.textContent=`${key}:${value}`;
+          ullist.appendChild(inlist);
+        })
+        list.appendChild(ullist);
+        htmllst.appendChild(list);
+      });
+    }
+
+    //catch block
+    catch(error){
+      console.log("Error:",error);
+    }
+  }
+  fetchdata();
+  </script>
+
+</body>
+</html>
