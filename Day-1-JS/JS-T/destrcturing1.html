@@ -1,0 +1,35 @@
+<!--node destrcturing1.html-->
+<!DOCTYPE html>
+<html>
+  <head></head>
+<body>
+  <p id="info1"></p>
+  <p id="info2"></p>
+  <script>
+
+  //1
+  const person={
+    name:"Ram",
+    age:28
+  };
+  let {name,age1}=person;
+  document.getElementById("info1").innerHTML=name+ " : " + age1;
+
+  //2
+  const person2 = {
+  firstName: "John",
+  lastName: "Doe",
+  age2: 50
+ };
+ let {firstName,lastName, age2 ,country = "US"} = person2;
+ document.getElementById("info2").innerHTML = firstName + "|" + lastName + "|" +  age2 + "|"+ country;
+
+//3
+let a = 5, b = 10;
+[a, b] = [b, a];
+console.log(a, b); 
+
+</script>
+</body>
+</html>
+
