@@ -1,3 +1,4 @@
+//fetch alone
 async function fetchuser(){
   try{
     console.log("fetching data");
