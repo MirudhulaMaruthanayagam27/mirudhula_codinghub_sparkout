@@ -42,3 +42,12 @@ function fullname(frst,last, callback){
 fullname("miru","miru s",function(name){
   console.log(name);
 });
+
+//6
+function fetchData(callback) {
+  const data = "Sample Data";
+  callback(data);
+}
+fetchData(function(result) {
+  console.log(result);
+});
