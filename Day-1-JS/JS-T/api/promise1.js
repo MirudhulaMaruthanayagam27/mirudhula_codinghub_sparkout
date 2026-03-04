@@ -1,3 +1,4 @@
+
 const promise=new Promise((resolve,reject) => {
   const error=false;
   if(!error){
@@ -7,3 +8,4 @@ const promise=new Promise((resolve,reject) => {
     reject("rejected");
   }
 })
+console.log(promise);
