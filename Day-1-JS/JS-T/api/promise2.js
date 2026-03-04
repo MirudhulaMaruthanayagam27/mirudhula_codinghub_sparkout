@@ -3,7 +3,7 @@ const val=Promise.resolve("Hi Mirudhula");
 
 val.then ( res => {
   console.log("This is result",res);
-  return "step1 done ,next"
+  return "step1 done ,go next"
 })
 .then(res1 => {
   console.log("res1 solved");
