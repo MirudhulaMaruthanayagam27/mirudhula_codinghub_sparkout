@@ -13,6 +13,7 @@ checkage(20)
 .then(res => console.log(res))
 .catch(err => console.log(err));
 
+
 //login system
 function login(name,pass){
   return new Promise((resolve, reject) => {
